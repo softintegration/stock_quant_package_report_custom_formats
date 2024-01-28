@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?><odoo>
+  <data>
+
+    <record id="stock.action_report_quant_package_barcode" model="ir.actions.report">
+        <field name="name">Package Barcode with Content (A5)</field>
+        <field name="report_name">stock_quant_package_report_custom_formats.report_package_barcode</field>
+        <field name="report_file">stock_quant_package_report_custom_formats.report_package_barcode</field>
+        <field name="paperformat_id" ref="stock_quant_package_report_custom_formats.paperformat_A5_label"/>
+    </record>
+
+    <record id="action_report_quant_package_barcode_small" model="ir.actions.report">
+        <field name="name">Package Barcode with Content (A6)</field>
+        <field name="model">stock.quant.package</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">stock_quant_package_report_custom_formats.report_package_barcode_small</field>
+        <field name="report_file">stock_quant_package_report_custom_formats.report_package_barcode_small</field>
+        <field name="binding_model_id" ref="model_stock_quant_package"/>
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="stock_quant_package_report_custom_formats.paperformat_A6_label"/>
+    </record>
+
+  </data>
+</odoo>

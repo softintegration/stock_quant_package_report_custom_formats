@@ -1,0 +1,92 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_quant_package_report_custom_formats
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-28 20:19+0000\n"
+"PO-Revision-Date: 2024-01-28 20:19+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: stock_quant_package_report_custom_formats
+#: model_terms:ir.ui.view,arch_db:stock_quant_package_report_custom_formats.report_package_barcode
+#: model_terms:ir.ui.view,arch_db:stock_quant_package_report_custom_formats.report_package_barcode_small
+msgid "<strong>Customer Prepress proof reference</strong>"
+msgstr "<strong>Rèfèrence BAT client</strong>"
+
+#. module: stock_quant_package_report_custom_formats
+#: model_terms:ir.ui.view,arch_db:stock_quant_package_report_custom_formats.report_package_barcode
+#: model_terms:ir.ui.view,arch_db:stock_quant_package_report_custom_formats.report_package_barcode_small
+msgid "<strong>Customer</strong>"
+msgstr "<strong>Client</strong>"
+
+#. module: stock_quant_package_report_custom_formats
+#: model_terms:ir.ui.view,arch_db:stock_quant_package_report_custom_formats.report_package_barcode
+#: model_terms:ir.ui.view,arch_db:stock_quant_package_report_custom_formats.report_package_barcode_small
+msgid "<strong>Lot/Serial Number</strong>"
+msgstr "<strong>N° de lot</strong>"
+
+#. module: stock_quant_package_report_custom_formats
+#: model_terms:ir.ui.view,arch_db:stock_quant_package_report_custom_formats.report_package_barcode
+#: model_terms:ir.ui.view,arch_db:stock_quant_package_report_custom_formats.report_package_barcode_small
+msgid "<strong>Package Type:</strong>"
+msgstr "<strong>Type d'emballage:</strong>"
+
+#. module: stock_quant_package_report_custom_formats
+#: model_terms:ir.ui.view,arch_db:stock_quant_package_report_custom_formats.report_package_barcode
+#: model_terms:ir.ui.view,arch_db:stock_quant_package_report_custom_formats.report_package_barcode_small
+msgid "<strong>Prepress Proof</strong>"
+msgstr "<strong>BAT</strong>"
+
+#. module: stock_quant_package_report_custom_formats
+#: model_terms:ir.ui.view,arch_db:stock_quant_package_report_custom_formats.report_package_barcode
+#: model_terms:ir.ui.view,arch_db:stock_quant_package_report_custom_formats.report_package_barcode_small
+msgid "<strong>Product</strong>"
+msgstr "<strong>Article</strong>"
+
+#. module: stock_quant_package_report_custom_formats
+#: model_terms:ir.ui.view,arch_db:stock_quant_package_report_custom_formats.report_package_barcode
+#: model_terms:ir.ui.view,arch_db:stock_quant_package_report_custom_formats.report_package_barcode_small
+msgid "<strong>Quantity</strong>"
+msgstr "<strong>Quantité</strong>"
+
+#. module: stock_quant_package_report_custom_formats
+#: model_terms:ir.ui.view,arch_db:stock_quant_package_report_custom_formats.report_package_barcode
+#: model_terms:ir.ui.view,arch_db:stock_quant_package_report_custom_formats.report_package_barcode_small
+msgid "Customer"
+msgstr "Client"
+
+#. module: stock_quant_package_report_custom_formats
+#: model_terms:ir.ui.view,arch_db:stock_quant_package_report_custom_formats.report_package_barcode
+#: model_terms:ir.ui.view,arch_db:stock_quant_package_report_custom_formats.report_package_barcode_small
+msgid "Lot/Serial Number"
+msgstr "N° de lot"
+
+#. module: stock_quant_package_report_custom_formats
+#: model:ir.actions.report,name:stock_quant_package_report_custom_formats.action_report_quant_package_barcode_small
+msgid "Package Barcode with Content (A6)"
+msgstr "Code-barre du paquet avec contenu (A6)"
+
+#. module: stock_quant_package_report_custom_formats
+#: model:ir.model,name:stock_quant_package_report_custom_formats.model_stock_quant_package
+msgid "Packages"
+msgstr "Colis"
+
+#. module: stock_quant_package_report_custom_formats
+#: model_terms:ir.ui.view,arch_db:stock_quant_package_report_custom_formats.report_package_barcode
+#: model_terms:ir.ui.view,arch_db:stock_quant_package_report_custom_formats.report_package_barcode_small
+msgid "Product"
+msgstr "Article"
+
+#. module: stock_quant_package_report_custom_formats
+#: model_terms:ir.ui.view,arch_db:stock_quant_package_report_custom_formats.report_package_barcode
+#: model_terms:ir.ui.view,arch_db:stock_quant_package_report_custom_formats.report_package_barcode_small
+msgid "Quantity"
+msgstr "Quantité"

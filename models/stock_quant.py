@@ -1,0 +1,32 @@
+# -*- coding: utf-8 -*- 
+
+from odoo import models,fields,api,_
+from odoo.exceptions import ValidationError
+
+SET_ONE_PRODUCT_BY_PACKAGE_MODULE = 'stock_quant_package_product_unique'
+SET_CUSTOMER_IN_PRODUCT_MODULE = 'product_customer'
+SET_PREPRESS_PROOF_IN_MRP_MODULE = 'mrp_prepress_management'
+
+class QuantPackage(models.Model):
+    """ Inherit stock package to constraint one product by package """
+    _inherit = "stock.quant.package"
+
+
+    def _one_product_by_package(self):
+        one_product_by_package =  self.env['ir.module.module'].sudo().search_count(
+            [('name', '=',SET_ONE_PRODUCT_BY_PACKAGE_MODULE), ('state', '=', 'installed')]) > 0
+        return one_product_by_package
+
+    def _set_customer_in_product(self):
+        return self.env['ir.module.module'].sudo().search_count(
+            [('name', '=',SET_CUSTOMER_IN_PRODUCT_MODULE), ('state', '=', 'installed')]) > 0
+
+    def _set_prepress_proof_in_mrp(self):
+        return self.env['ir.module.module'].sudo().search_count(
+            [('name', '=',SET_PREPRESS_PROOF_IN_MRP_MODULE), ('state', '=', 'installed')]) > 0
+
+    def _get_mrp_production(self):
+        lot_id = self.quant_ids[0].lot_id
+        if lot_id:
+            return self.env['mrp.production'].search([('lot_producing_id','=',lot_id.id)],limit=1)
+        return self.env['mrp.production']
