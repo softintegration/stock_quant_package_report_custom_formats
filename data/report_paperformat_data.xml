@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data>
+    <data noupdate="1">
         <record id="paperformat_A5_label" model="report.paperformat">
             <field name="name">A5 Label</field>
             <field name="default" eval="True" />
