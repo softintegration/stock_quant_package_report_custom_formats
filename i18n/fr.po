@@ -19,7 +19,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:stock_quant_package_report_custom_formats.report_package_barcode
 #: model_terms:ir.ui.view,arch_db:stock_quant_package_report_custom_formats.report_package_barcode_small
 msgid "<strong>Customer Prepress proof reference</strong>"
-msgstr "<strong>Rèfèrence BAT client</strong>"
+msgstr "<strong>BAT client</strong>"
 
 #. module: stock_quant_package_report_custom_formats
 #: model_terms:ir.ui.view,arch_db:stock_quant_package_report_custom_formats.report_package_barcode
