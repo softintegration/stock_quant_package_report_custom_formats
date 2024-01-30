@@ -37,30 +37,30 @@
                                         <tbody>
                                             <t t-if="partner_in_product">
                                                 <tr name="tr_one_customer">
-                                                    <th name="th_one_product"><center>Customer</center></th>
+                                                    <th name="th_one_product">Customer</th>
                                                     <td><span t-field="o.quant_ids[0].product_id.partner_id"/></td>
                                                 </tr>
                                             </t>
                                             <tr name="tr_one_product">
-                                                <th width="20%" name="th_one_product"><center>Product</center></th>
-                                                <td width="80%"><span t-field="o.quant_ids[0].product_id.name"/></td>
+                                                <th width="15%" name="th_one_product">Product</th>
+                                                <td width="85%"><span t-field="o.quant_ids[0].product_id.name"/></td>
                                             </tr>
                                             <t t-if="prepress_proof_in_mrp">
                                                 <tr name="tr_one_prepress_proof">
-                                                    <th name="th_one_prepress_proof"><center>Prepress Proof</center></th>
+                                                    <th name="th_one_prepress_proof">Prepress Proof</th>
                                                     <td><t t-if="mrp_production and mrp_production.prepress_proof_id"><span t-esc="mrp_production.prepress_proof_id.name"/></t></td>
                                                 </tr>
                                                 <tr name="tr_one_prepress_proof_client_ref">
-                                                    <th name="th_one_prepress_proof_client_ref"><center>Customer Prepress proof reference</center></th>
+                                                    <th name="th_one_prepress_proof_client_ref">Customer Prepress proof reference</th>
                                                     <td><t t-if="mrp_production and mrp_production.prepress_proof_id"><span t-esc="mrp_production.prepress_proof_id.client_ref"/></t></td>
                                                 </tr>
                                             </t>
                                             <tr name="tr_one_serial" t-if="has_serial_number">
-                                                <th name="th_one_serial"><center>Lot/Serial Number</center></th>
+                                                <th name="th_one_serial">Lot/Serial Number</th>
                                                 <td><span t-field="o.quant_ids[0].lot_id.name"/></td>
                                             </tr>
                                             <tr name="tr_one_quantity">
-                                                <th name="th_one_quantity"><center>Quantity</center></th>
+                                                <th name="th_one_quantity">Quantity</th>
                                                 <td><span t-field="o.quant_ids[0].quantity"/> <span t-field="o.quant_ids[0].product_id.uom_id.name"/></td>
                                             </tr>
                                         </tbody>
@@ -149,30 +149,30 @@
                                         <tbody>
                                             <t t-if="partner_in_product">
                                                 <tr name="tr_one_customer">
-                                                    <th name="th_one_product"><center>Customer</center></th>
+                                                    <th name="th_one_product">Customer</th>
                                                     <td><span t-field="o.quant_ids[0].product_id.partner_id"/></td>
                                                 </tr>
                                             </t>
                                             <tr name="tr_one_product">
-                                                <th width="20%" name="th_one_product"><center>Product</center></th>
-                                                <td width="80%"><span t-field="o.quant_ids[0].product_id.name"/></td>
+                                                <th width="15%" name="th_one_product">Product</th>
+                                                <td width="85%"><span t-field="o.quant_ids[0].product_id.name"/></td>
                                             </tr>
                                             <t t-if="prepress_proof_in_mrp">
                                                 <tr name="tr_one_prepress_proof">
-                                                    <th name="th_one_prepress_proof"><center>Prepress Proof</center></th>
+                                                    <th name="th_one_prepress_proof">Prepress Proof</th>
                                                     <td><t t-if="mrp_production and mrp_production.prepress_proof_id"><span t-esc="mrp_production.prepress_proof_id.name"/></t></td>
                                                 </tr>
                                                 <tr name="tr_one_prepress_proof_client_ref">
-                                                    <th name="th_one_prepress_proof_client_ref"><center>Customer Prepress proof reference</center></th>
+                                                    <th name="th_one_prepress_proof_client_ref">Customer Prepress proof reference</th>
                                                     <td><t t-if="mrp_production and mrp_production.prepress_proof_id"><span t-esc="mrp_production.prepress_proof_id.client_ref"/></t></td>
                                                 </tr>
                                             </t>
                                             <tr name="tr_one_serial" t-if="has_serial_number">
-                                                <th name="th_one_serial"><center>Lot/Serial Number</center></th>
+                                                <th name="th_one_serial">Lot/Serial Number</th>
                                                 <td><span t-field="o.quant_ids[0].lot_id.name"/></td>
                                             </tr>
                                             <tr name="tr_one_quantity">
-                                                <th name="th_one_quantity"><center>Quantity</center></th>
+                                                <th name="th_one_quantity">Quantity</th>
                                                 <td><span t-field="o.quant_ids[0].quantity"/> <span t-field="o.quant_ids[0].product_id.uom_id.name"/></td>
                                             </tr>
                                         </tbody>
