@@ -1,6 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?><odoo>
   <data>
 
+
+    <record id="stock.action_report_quant_package_barcode" model="ir.actions.report">
+        <field name="paperformat_id" ref="base.paperformat_euro"/>
+    </record>
+
     <record id="action_report_quant_package_barcode" model="ir.actions.report">
         <field name="name">Package Barcode with Content (A5)</field>
         <field name="model">stock.quant.package</field>
