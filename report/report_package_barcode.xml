@@ -6,19 +6,19 @@
         <t t-foreach="docs" t-as="o">
                 <t t-call="web.html_container">
                     <t t-call="web.external_layout">
-                            <div class="page">
+                            <div class="page" style="color:#000000 !important;">
                                 <div class="oe_structure"/>
                                 <t t-set="only_one_product" t-value="o._one_product_by_package()" />
                                 <t t-set="partner_in_product" t-value="o._set_customer_in_product()" />
                                 <t t-set="prepress_proof_in_mrp" t-value="o._set_prepress_proof_in_mrp()"/>
                                 <t t-set="mrp_production" t-value="o._get_mrp_production()"/>
-                                    <table class="table table-condensed table-bordered" style="border-bottom: 0px solid white !important;">
+                                    <table class="table table-condensed table-bordered" style="border-bottom: 0px solid white !important;height:60px !important;">
                                         <tr>
-                                            <th>
+                                            <th style="text-align: center">
                                               <h1 t-field="o.name" class="mt0 float-left"/>
                                             </th>
                                             <th name="td_pk_barcode" style="text-align: center">
-                                                <div t-field="o.name" t-options="{'widget': 'barcode', 'width': 600, 'height': 100, 'img_style': 'width:300px;height:50px;'}"/>
+                                                <div t-field="o.name" t-options="{'widget': 'barcode', 'width': 600, 'height': 60, 'img_style': 'width:300px;height:40px;'}"/>
                                                 <p t-field="o.name"/>
                                             </th>
                                         </tr>
@@ -118,19 +118,19 @@
         <t t-foreach="docs" t-as="o">
                 <t t-call="web.html_container">
                     <t t-call="web.external_layout">
-                            <div class="page">
+                            <div class="page" style="color:#000000 !important;">
                                 <div class="oe_structure"/>
                                 <t t-set="only_one_product" t-value="o._one_product_by_package()" />
                                 <t t-set="partner_in_product" t-value="o._set_customer_in_product()" />
                                 <t t-set="prepress_proof_in_mrp" t-value="o._set_prepress_proof_in_mrp()"/>
                                 <t t-set="mrp_production" t-value="o._get_mrp_production()"/>
-                                    <table class="table table-condensed table-bordered" style="border-bottom: 0px solid white !important;">
+                                    <table class="table table-condensed table-bordered" style="border-bottom: 0px solid white !important;height:60px !important;">
                                         <tr>
-                                            <th>
+                                            <th style="text-align: center">
                                               <h1 t-field="o.name" class="mt0 float-left"/>
                                             </th>
                                             <th name="td_pk_barcode" style="text-align: center">
-                                                <div t-field="o.name" t-options="{'widget': 'barcode', 'width': 600, 'height': 100, 'img_style': 'width:300px;height:50px;'}"/>
+                                                <div t-field="o.name" t-options="{'widget': 'barcode', 'width': 600, 'height': 60, 'img_style': 'width:300px;height:40px;'}"/>
                                                 <p t-field="o.name"/>
                                             </th>
                                         </tr>
