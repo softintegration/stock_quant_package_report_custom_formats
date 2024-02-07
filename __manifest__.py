@@ -10,14 +10,20 @@
     'qweb': [],
     'description': False,
     'images': [],
-    'version': '1.0.1.6',
+    'version': '1.0.1.7',
     'category': 'Inventory/Inventory',
     'demo': [],
-    'depends': ['stock'],
+    'depends': ['stock','web'],
     'data': [
         'data/report_paperformat_data.xml',
         'report/report_package_barcode.xml',
         'report/stock_report_views.xml'
     ],
+    'assets': {
+        'web.assets_backend': [
+            'stock_quant_package_report_custom_formats/static/src/css/custom.css',
+            'stock_quant_package_report_custom_formats/static/src/fonts/myriad/stylesheet.css',
+        ],
+    },
     'license': 'LGPL-3',
 }

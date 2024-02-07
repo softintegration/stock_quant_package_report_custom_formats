@@ -1,0 +1,90 @@
+.table_pers {
+  width: 100%;
+  color: #212529;
+}
+
+.table_pers th,
+.table_pers td {
+  padding: 0.5rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+.table_pers thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.table_pers tbody + tbody {
+  border-top: 2px solid #dee2e6;
+}
+
+.table_pers-sm th,
+.table_pers-sm td {
+  padding: 0.3rem;
+}
+
+.table_pers-bordered {
+  border: 1px solid #dee2e6;
+}
+
+.table_pers-bordered th,
+.table_pers-bordered td {
+  border: 1px solid #dee2e6;
+}
+
+.table_pers-bordered thead th,
+.table_pers-bordered thead td {
+  border-bottom-width: 2px;
+}
+
+.table_pers-borderless th,
+.table_pers-borderless td,
+.table_pers-borderless thead th,
+.table_pers-borderless tbody + tbody {
+  border: 0;
+}
+
+.table_pers-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.table_pers-hover tbody tr:hover {
+  color: #212529;
+  background-color: rgba(0, 0, 0, 0.075);
+}
+
+.table_pers-primary,
+.table_pers-primary > th,
+.table_pers-primary > td {
+  background-color: #b8daff;
+}
+
+.table_pers-primary th,
+.table_pers-primary td,
+.table_pers-primary thead th,
+.table_pers-primary tbody + tbody {
+  border-color: #7abaff;
+}
+
+.table_pers-hover .table-primary:hover {
+  background-color: #9fcdff;
+}
+
+.table_pers-hover .table-primary:hover > td,
+.table_pers-hover .table-primary:hover > th {
+  background-color: #9fcdff;
+}
+
+.table_pers-secondary,
+.table_pers-secondary > th,
+.table_pers-secondary > td {
+  background-color: #d6d8db;
+}
+
+.table_pers-secondary th,
+.table_pers-secondary td,
+.table_pers-secondary thead th,
+.table_pers-secondary tbody + tbody {
+  border-color: #b3b7bb;
+}
