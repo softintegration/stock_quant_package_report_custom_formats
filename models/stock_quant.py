@@ -26,7 +26,10 @@ class QuantPackage(models.Model):
             [('name', '=',SET_PREPRESS_PROOF_IN_MRP_MODULE), ('state', '=', 'installed')]) > 0
 
     def _get_mrp_production(self):
-        lot_id = self.quant_ids[0].lot_id
-        if lot_id:
-            return self.env['mrp.production'].search([('lot_producing_id','=',lot_id.id)],limit=1)
-        return self.env['mrp.production']
+        try:
+            lot_id = self.quant_ids[0].lot_id
+            if lot_id:
+                return self.env['mrp.production'].search([('lot_producing_id','=',lot_id.id)],limit=1)
+            return self.env['mrp.production']
+        except IndexError:
+            return self.env['mrp.production']
