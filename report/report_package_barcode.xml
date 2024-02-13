@@ -111,15 +111,6 @@
                                 <t t-set="partner_in_product" t-value="o._set_customer_in_product()" />
                                 <t t-set="prepress_proof_in_mrp" t-value="o._set_prepress_proof_in_mrp()"/>
                                 <t t-set="mrp_production" t-value="o._get_mrp_production()"/>
-                                <!--<div class="row" style="margin-top:20px !important;background-color: rgba(0, 0, 0, 0.075) !important;">
-                                    <div class="col-4">
-                                        <h1 t-field="o.name" class="mt0 float-left"/>
-                                    </div>
-                                    <div class="col-8" name="td_pk_barcode" style="text-align: center">
-                                        <div t-field="o.name" t-options="{'widget': 'barcode', 'width': 600, 'height': 100, 'img_style': 'width:300px;height:50px;'}"/>
-                                        <p t-field="o.name"/>
-                                    </div>
-                                </div>-->
                                    <table class="table_pers" style="border-bottom: 0px solid white !important;">
                                         <tr>
                                             <th style="color:#000000 !important;">
@@ -131,13 +122,7 @@
                                             </th>
                                         </tr>
                                     </table>
-                                   <!--  <div class="row mt32 mb32">
-                                        <div t-if="o.package_type_id" class="o_packaging_type col-auto">
-                                            <strong>Package Type:</strong>
-                                            <p t-field="o.package_type_id.name"/>
-                                        </div>
-                                    </div>-->
-                                    <!-- if we have only one product by package we have to format the output of products accordingly-->
+                                <!-- if we have only one product by package we have to format the output of products accordingly-->
                                 <t t-if="only_one_product">
                                     <table class="table_pers table_pers-sm table-bordered" style="border-bottom: 0px solid white !important;font-size:18px !important;"
                                     >
@@ -227,6 +212,7 @@
                                         </tbody>
                                 </table>
                                 </t>
+                                <!-- if we want to display the forecasted content and not the real state of the package-->
                             </div>
                     </t>
                 </t>
@@ -344,15 +330,6 @@
                                 <t t-set="partner_in_product" t-value="o._set_customer_in_product()" />
                                 <t t-set="prepress_proof_in_mrp" t-value="o._set_prepress_proof_in_mrp()"/>
                                 <t t-set="mrp_production" t-value="o._get_mrp_production()"/>
-                                <!--<div class="row" style="margin-top:20px !important;background-color: rgba(0, 0, 0, 0.075) !important;">
-                                    <div class="col-4">
-                                        <h1 t-field="o.name" class="mt0 float-left"/>
-                                    </div>
-                                    <div class="col-8" name="td_pk_barcode" style="text-align: center">
-                                        <div t-field="o.name" t-options="{'widget': 'barcode', 'width': 600, 'height': 100, 'img_style': 'width:300px;height:50px;'}"/>
-                                        <p t-field="o.name"/>
-                                    </div>
-                                </div>-->
                                    <table class="table_pers" style="border-bottom: 0px solid white !important;">
                                         <tr>
                                             <th style="color:#000000 !important;">
@@ -364,13 +341,7 @@
                                             </th>
                                         </tr>
                                     </table>
-                                   <!--  <div class="row mt32 mb32">
-                                        <div t-if="o.package_type_id" class="o_packaging_type col-auto">
-                                            <strong>Package Type:</strong>
-                                            <p t-field="o.package_type_id.name"/>
-                                        </div>
-                                    </div>-->
-                                    <!-- if we have only one product by package we have to format the output of products accordingly-->
+                                <!-- if we have only one product by package we have to format the output of products accordingly-->
                                 <t t-if="only_one_product">
                                     <table class="table_pers table_pers-sm table-bordered" style="border-bottom: 0px solid white !important;font-size:18px !important;"
                                     >
@@ -459,6 +430,182 @@
                                             </tr>
                                         </tbody>
                                 </table>
+                                </t>
+                                <!-- if we want to display the forecasted content and not the real state of the package-->
+                            </div>
+                    </t>
+                </t>
+            </t>
+    </template>
+
+
+     <template id="report_package_barcode_small_forecasted_content">
+        <t t-foreach="docs" t-as="o">
+                <t t-call="web.html_container">
+                    <t t-call="web.external_layout">
+                            <div class="page" style="font-family: 'Myriad Pro' !important;">
+                                                                <style type="text/css">
+        <![CDATA[
+       .table_pers {
+  width: 100%;
+  color: #212529;
+}
+
+.table_pers th,
+.table_pers td {
+  padding: 0.5rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+.table_pers thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.table_pers tbody + tbody {
+  border-top: 2px solid #dee2e6;
+}
+
+.table_pers-sm th,
+.table_pers-sm td {
+  padding: 0.3rem;
+}
+
+.table_pers-bordered {
+  border: 1px solid #dee2e6;
+}
+
+.table_pers-bordered th,
+.table_pers-bordered td {
+  border: 1px solid #dee2e6;
+}
+
+.table_pers-bordered thead th,
+.table_pers-bordered thead td {
+  border-bottom-width: 2px;
+}
+
+.table_pers-borderless th,
+.table_pers-borderless td,
+.table_pers-borderless thead th,
+.table_pers-borderless tbody + tbody {
+  border: 0;
+}
+
+.table_pers-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.table_pers-hover tbody tr:hover {
+  color: #212529;
+  background-color: rgba(0, 0, 0, 0.075);
+}
+
+.table_pers-primary,
+.table_pers-primary > th,
+.table_pers-primary > td {
+  background-color: #b8daff;
+}
+
+.table_pers-primary th,
+.table_pers-primary td,
+.table_pers-primary thead th,
+.table_pers-primary tbody + tbody {
+  border-color: #7abaff;
+}
+
+.table_pers-hover .table-primary:hover {
+  background-color: #9fcdff;
+}
+
+.table_pers-hover .table-primary:hover > td,
+.table_pers-hover .table-primary:hover > th {
+  background-color: #9fcdff;
+}
+
+.table_pers-secondary,
+.table_pers-secondary > th,
+.table_pers-secondary > td {
+  background-color: #d6d8db;
+}
+
+.table_pers-secondary th,
+.table_pers-secondary td,
+.table_pers-secondary thead th,
+.table_pers-secondary tbody + tbody {
+  border-color: #b3b7bb;
+}
+
+
+
+
+          ]]>
+        </style>
+                                <div class="oe_structure"/>
+                                <t t-set="partner_in_product" t-value="o._set_customer_in_product()" />
+                                <t t-set="prepress_proof_in_mrp" t-value="o._set_prepress_proof_in_mrp()"/>
+                                <t t-set="forecasted_content" t-value="o._get_forecasted_content()"/>
+                                   <table class="table_pers" style="border-bottom: 0px solid white !important;">
+                                        <tr>
+                                            <th style="color:#000000 !important;">
+                                              <h1 t-field="o.name" class="mt0 float-left"/>
+                                            </th>
+                                            <th name="td_pk_barcode" style="text-align: center;color:#000000 !important;">
+                                                <div t-field="o.name" t-options="{'widget': 'barcode', 'width': 600, 'height': 100, 'img_style': 'width:300px;height:50px;'}"/>
+                                                <p t-field="o.name"/>
+                                            </th>
+                                        </tr>
+                                    </table>
+
+                                <!-- if we want to display the forecasted content and not the real state of the package-->
+                                <t t-if="forecasted_content">
+                                    <table class="table_pers table_pers-sm table-bordered" style="border-bottom: 0px solid white !important;font-size:18px !important;"
+                                    >
+                                        <t t-set="has_serial_number" t-value="forecasted_content['lot_id']" />
+                                        <tbody>
+                                            <t t-if="partner_in_product">
+                                                <tr name="tr_one_customer">
+                                                    <td name="th_one_product" style="color:#000000 !important;">Customer</td>
+                                                    <th style="color:#000000 !important;">
+                                                        <t t-if="forecasted_content['partner_id']"><span t-esc="forecasted_content['partner_id'].name"/></t>
+                                                    </th>
+                                                </tr>
+                                            </t>
+                                            <tr name="tr_one_product">
+                                                <td width="16%" name="th_one_product" style="color:#000000 !important;">Product</td>
+                                                <th width="84%" style="color:#000000 !important;">
+                                                    <t t-if="forecasted_content['product_id']">
+                                                       <span t-esc="forecasted_content['product_id'].name"/>
+                                                    </t>
+                                                </th>
+                                            </tr>
+                                            <t t-if="prepress_proof_in_mrp">
+                                                <tr name="tr_one_prepress_proof">
+                                                    <td name="th_one_prepress_proof" style="color:#000000 !important;">Prepress Proof</td>
+                                                    <th style="color:#000000 !important;"><t t-if="forecasted_content['prepress_proof_id']"><span t-esc="forecasted_content['prepress_proof_id'].name"/></t></th>
+                                                </tr>
+                                                <tr name="tr_one_prepress_proof_client_ref">
+                                                    <td name="th_one_prepress_proof_client_ref" style="color:#000000 !important;">Customer Prepress proof reference</td>
+                                                    <th style="color:#000000 !important;"><t t-if="forecasted_content['prepress_proof_id']"><span t-esc="forecasted_content['prepress_proof_id'].client_ref"/></t></th>
+                                                </tr>
+                                            </t>
+                                            <tr name="tr_one_serial" t-if="has_serial_number">
+                                                <td name="th_one_serial" style="color:#000000 !important;">Lot/Serial Number</td>
+                                                <th style="color:#000000 !important;">
+                                                    <t t-if="forecasted_content['lot_id']">
+                                                        <span t-esc="forecasted_content['lot_id'].name"/>
+                                                    </t>
+                                                </th>
+                                            </tr>
+                                            <tr name="tr_one_quantity">
+                                                <td name="th_one_quantity" style="color:#000000 !important;">Quantity</td>
+                                                <th style="color:#000000 !important;">
+                                                    <span t-esc="forecasted_content['quantity']"/> <span t-esc="forecasted_content['product_id'].uom_id.name"/>
+                                                </th>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </t>
                             </div>
                     </t>

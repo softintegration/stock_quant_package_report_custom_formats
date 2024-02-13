@@ -10,14 +10,15 @@
     'qweb': [],
     'description': False,
     'images': [],
-    'version': '1.0.1.8',
+    'version': '1.0.1.9',
     'category': 'Inventory/Inventory',
     'demo': [],
     'depends': ['stock','web'],
     'data': [
         'data/report_paperformat_data.xml',
         'report/report_package_barcode.xml',
-        'report/stock_report_views.xml'
+        'report/stock_report_views.xml',
+        'views/stock_quant_views.xml'
     ],
     'assets': {
         'web.assets_backend': [

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*- 
 
 from odoo import models,fields,api,_
-from odoo.exceptions import ValidationError
+from odoo.exceptions import ValidationError,UserError
 
 SET_ONE_PRODUCT_BY_PACKAGE_MODULE = 'stock_quant_package_product_unique'
 SET_CUSTOMER_IN_PRODUCT_MODULE = 'product_customer'
@@ -10,7 +10,6 @@ SET_PREPRESS_PROOF_IN_MRP_MODULE = 'mrp_prepress_management'
 class QuantPackage(models.Model):
     """ Inherit stock package to constraint one product by package """
     _inherit = "stock.quant.package"
-
 
     def _one_product_by_package(self):
         one_product_by_package =  self.env['ir.module.module'].sudo().search_count(
@@ -33,3 +32,8 @@ class QuantPackage(models.Model):
             return self.env['mrp.production']
         except IndexError:
             return self.env['mrp.production']
+
+
+
+    def action_report_quant_package_barcode_a6_print(self):
+        return self.env.ref('stock_quant_package_report_custom_formats.action_report_quant_package_barcode_small_forecasted_content').report_action(self)
