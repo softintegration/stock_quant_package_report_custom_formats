@@ -10,7 +10,7 @@
     'qweb': [],
     'description': False,
     'images': [],
-    'version': '1.0.1.9',
+    'version': '1.0.1.10',
     'category': 'Inventory/Inventory',
     'demo': [],
     'depends': ['stock','web'],
@@ -20,11 +20,5 @@
         'report/stock_report_views.xml',
         'views/stock_quant_views.xml'
     ],
-    'assets': {
-        'web.assets_backend': [
-            'stock_quant_package_report_custom_formats/static/src/css/custom.css',
-            'stock_quant_package_report_custom_formats/static/src/fonts/myriad/stylesheet.css',
-        ],
-    },
     'license': 'LGPL-3',
 }

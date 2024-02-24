@@ -4,108 +4,14 @@
     <!-- A5 -->
     <template id="report_package_barcode">
 
-       <t t-foreach="docs" t-as="o">
+        <t t-foreach="docs" t-as="o">
                 <t t-call="web.html_container">
                     <t t-call="web.external_layout">
-                            <div class="page" style="font-family: 'Myriad Pro' !important;">
-                                                                <style type="text/css">
-        <![CDATA[
-       .table_pers {
-  width: 100%;
-  color: #212529;
-}
+                        <link rel="stylesheet" type="text/css" href="/stock_quant_package_report_custom_formats/static/src/css/custom.css"/>
+                        <link rel="stylesheet" type="text/css" href="/stock_quant_package_report_custom_formats/static/src/css/custom_fonts.css"/>
 
-.table_pers th,
-.table_pers td {
-  padding: 0.5rem;
-  vertical-align: top;
-  border-top: 1px solid #dee2e6;
-}
+                            <div class="page" style="font-family: 'Myriad Pro cond', sans-serif !important;font-size:22px !important;">
 
-.table_pers thead th {
-  vertical-align: bottom;
-  border-bottom: 2px solid #dee2e6;
-}
-
-.table_pers tbody + tbody {
-  border-top: 2px solid #dee2e6;
-}
-
-.table_pers-sm th,
-.table_pers-sm td {
-  padding: 0.3rem;
-}
-
-.table_pers-bordered {
-  border: 1px solid #dee2e6;
-}
-
-.table_pers-bordered th,
-.table_pers-bordered td {
-  border: 1px solid #dee2e6;
-}
-
-.table_pers-bordered thead th,
-.table_pers-bordered thead td {
-  border-bottom-width: 2px;
-}
-
-.table_pers-borderless th,
-.table_pers-borderless td,
-.table_pers-borderless thead th,
-.table_pers-borderless tbody + tbody {
-  border: 0;
-}
-
-.table_pers-striped tbody tr:nth-of-type(odd) {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-
-.table_pers-hover tbody tr:hover {
-  color: #212529;
-  background-color: rgba(0, 0, 0, 0.075);
-}
-
-.table_pers-primary,
-.table_pers-primary > th,
-.table_pers-primary > td {
-  background-color: #b8daff;
-}
-
-.table_pers-primary th,
-.table_pers-primary td,
-.table_pers-primary thead th,
-.table_pers-primary tbody + tbody {
-  border-color: #7abaff;
-}
-
-.table_pers-hover .table-primary:hover {
-  background-color: #9fcdff;
-}
-
-.table_pers-hover .table-primary:hover > td,
-.table_pers-hover .table-primary:hover > th {
-  background-color: #9fcdff;
-}
-
-.table_pers-secondary,
-.table_pers-secondary > th,
-.table_pers-secondary > td {
-  background-color: #d6d8db;
-}
-
-.table_pers-secondary th,
-.table_pers-secondary td,
-.table_pers-secondary thead th,
-.table_pers-secondary tbody + tbody {
-  border-color: #b3b7bb;
-}
-
-
-
-
-          ]]>
-        </style>
                                 <div class="oe_structure"/>
                                 <t t-set="only_one_product" t-value="o._one_product_by_package()" />
                                 <t t-set="partner_in_product" t-value="o._set_customer_in_product()" />
@@ -124,7 +30,7 @@
                                     </table>
                                 <!-- if we have only one product by package we have to format the output of products accordingly-->
                                 <t t-if="only_one_product">
-                                    <table class="table_pers table_pers-sm table-bordered" style="border-bottom: 0px solid white !important;font-size:18px !important;"
+                                    <table class="table_pers table_pers-sm table-bordered" style="border-bottom: 0px solid white !important;"
                                     >
                                         <t t-set="has_serial_number" t-value="o.quant_ids.mapped('lot_id')" />
                                         <tbody>
@@ -137,8 +43,8 @@
                                                 </tr>
                                             </t>
                                             <tr name="tr_one_product">
-                                                <td width="16%" name="th_one_product" style="color:#000000 !important;">Product</td>
-                                                <th width="84%" style="color:#000000 !important;">
+                                                <td width="13%" name="th_one_product" style="color:#000000 !important;">Product</td>
+                                                <th width="87%" style="color:#000000 !important;">
                                                     <t t-if="o.quant_ids">
                                                        <span t-field="o.quant_ids[0].product_id.name"/>
                                                     </t>
@@ -226,105 +132,11 @@
         <t t-foreach="docs" t-as="o">
                 <t t-call="web.html_container">
                     <t t-call="web.external_layout">
-                            <div class="page" style="font-family: 'Myriad Pro' !important;">
-                                                                <style type="text/css">
-        <![CDATA[
-       .table_pers {
-  width: 100%;
-  color: #212529;
-}
+                        <link rel="stylesheet" type="text/css" href="/stock_quant_package_report_custom_formats/static/src/css/custom.css"/>
+                        <link rel="stylesheet" type="text/css" href="/stock_quant_package_report_custom_formats/static/src/css/custom_fonts.css"/>
 
-.table_pers th,
-.table_pers td {
-  padding: 0.5rem;
-  vertical-align: top;
-  border-top: 1px solid #dee2e6;
-}
+                            <div class="page" style="font-family: 'Myriad Pro cond', sans-serif !important;font-size:22px !important;">
 
-.table_pers thead th {
-  vertical-align: bottom;
-  border-bottom: 2px solid #dee2e6;
-}
-
-.table_pers tbody + tbody {
-  border-top: 2px solid #dee2e6;
-}
-
-.table_pers-sm th,
-.table_pers-sm td {
-  padding: 0.3rem;
-}
-
-.table_pers-bordered {
-  border: 1px solid #dee2e6;
-}
-
-.table_pers-bordered th,
-.table_pers-bordered td {
-  border: 1px solid #dee2e6;
-}
-
-.table_pers-bordered thead th,
-.table_pers-bordered thead td {
-  border-bottom-width: 2px;
-}
-
-.table_pers-borderless th,
-.table_pers-borderless td,
-.table_pers-borderless thead th,
-.table_pers-borderless tbody + tbody {
-  border: 0;
-}
-
-.table_pers-striped tbody tr:nth-of-type(odd) {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-
-.table_pers-hover tbody tr:hover {
-  color: #212529;
-  background-color: rgba(0, 0, 0, 0.075);
-}
-
-.table_pers-primary,
-.table_pers-primary > th,
-.table_pers-primary > td {
-  background-color: #b8daff;
-}
-
-.table_pers-primary th,
-.table_pers-primary td,
-.table_pers-primary thead th,
-.table_pers-primary tbody + tbody {
-  border-color: #7abaff;
-}
-
-.table_pers-hover .table-primary:hover {
-  background-color: #9fcdff;
-}
-
-.table_pers-hover .table-primary:hover > td,
-.table_pers-hover .table-primary:hover > th {
-  background-color: #9fcdff;
-}
-
-.table_pers-secondary,
-.table_pers-secondary > th,
-.table_pers-secondary > td {
-  background-color: #d6d8db;
-}
-
-.table_pers-secondary th,
-.table_pers-secondary td,
-.table_pers-secondary thead th,
-.table_pers-secondary tbody + tbody {
-  border-color: #b3b7bb;
-}
-
-
-
-
-          ]]>
-        </style>
                                 <div class="oe_structure"/>
                                 <t t-set="only_one_product" t-value="o._one_product_by_package()" />
                                 <t t-set="partner_in_product" t-value="o._set_customer_in_product()" />
@@ -343,7 +155,7 @@
                                     </table>
                                 <!-- if we have only one product by package we have to format the output of products accordingly-->
                                 <t t-if="only_one_product">
-                                    <table class="table_pers table_pers-sm table-bordered" style="border-bottom: 0px solid white !important;font-size:18px !important;"
+                                    <table class="table_pers table_pers-sm table-bordered" style="border-bottom: 0px solid white !important;"
                                     >
                                         <t t-set="has_serial_number" t-value="o.quant_ids.mapped('lot_id')" />
                                         <tbody>
@@ -356,8 +168,8 @@
                                                 </tr>
                                             </t>
                                             <tr name="tr_one_product">
-                                                <td width="16%" name="th_one_product" style="color:#000000 !important;">Product</td>
-                                                <th width="84%" style="color:#000000 !important;">
+                                                <td width="13%" name="th_one_product" style="color:#000000 !important;">Product</td>
+                                                <th width="87%" style="color:#000000 !important;">
                                                     <t t-if="o.quant_ids">
                                                        <span t-field="o.quant_ids[0].product_id.name"/>
                                                     </t>
@@ -443,105 +255,10 @@
         <t t-foreach="docs" t-as="o">
                 <t t-call="web.html_container">
                     <t t-call="web.external_layout">
-                            <div class="page" style="font-family: 'Myriad Pro' !important;">
-                                                                <style type="text/css">
-        <![CDATA[
-       .table_pers {
-  width: 100%;
-  color: #212529;
-}
+                        <link rel="stylesheet" type="text/css" href="/stock_quant_package_report_custom_formats/static/src/css/custom.css"/>
+                        <link rel="stylesheet" type="text/css" href="/stock_quant_package_report_custom_formats/static/src/css/custom_fonts.css"/>
+                            <div class="page" style="font-family: 'Myriad Pro cond', sans-serif !important;font-size:22px !important;">
 
-.table_pers th,
-.table_pers td {
-  padding: 0.5rem;
-  vertical-align: top;
-  border-top: 1px solid #dee2e6;
-}
-
-.table_pers thead th {
-  vertical-align: bottom;
-  border-bottom: 2px solid #dee2e6;
-}
-
-.table_pers tbody + tbody {
-  border-top: 2px solid #dee2e6;
-}
-
-.table_pers-sm th,
-.table_pers-sm td {
-  padding: 0.3rem;
-}
-
-.table_pers-bordered {
-  border: 1px solid #dee2e6;
-}
-
-.table_pers-bordered th,
-.table_pers-bordered td {
-  border: 1px solid #dee2e6;
-}
-
-.table_pers-bordered thead th,
-.table_pers-bordered thead td {
-  border-bottom-width: 2px;
-}
-
-.table_pers-borderless th,
-.table_pers-borderless td,
-.table_pers-borderless thead th,
-.table_pers-borderless tbody + tbody {
-  border: 0;
-}
-
-.table_pers-striped tbody tr:nth-of-type(odd) {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-
-.table_pers-hover tbody tr:hover {
-  color: #212529;
-  background-color: rgba(0, 0, 0, 0.075);
-}
-
-.table_pers-primary,
-.table_pers-primary > th,
-.table_pers-primary > td {
-  background-color: #b8daff;
-}
-
-.table_pers-primary th,
-.table_pers-primary td,
-.table_pers-primary thead th,
-.table_pers-primary tbody + tbody {
-  border-color: #7abaff;
-}
-
-.table_pers-hover .table-primary:hover {
-  background-color: #9fcdff;
-}
-
-.table_pers-hover .table-primary:hover > td,
-.table_pers-hover .table-primary:hover > th {
-  background-color: #9fcdff;
-}
-
-.table_pers-secondary,
-.table_pers-secondary > th,
-.table_pers-secondary > td {
-  background-color: #d6d8db;
-}
-
-.table_pers-secondary th,
-.table_pers-secondary td,
-.table_pers-secondary thead th,
-.table_pers-secondary tbody + tbody {
-  border-color: #b3b7bb;
-}
-
-
-
-
-          ]]>
-        </style>
                                 <div class="oe_structure"/>
                                 <t t-set="partner_in_product" t-value="o._set_customer_in_product()" />
                                 <t t-set="prepress_proof_in_mrp" t-value="o._set_prepress_proof_in_mrp()"/>
@@ -560,7 +277,7 @@
 
                                 <!-- if we want to display the forecasted content and not the real state of the package-->
                                 <t t-if="forecasted_content">
-                                    <table class="table_pers table_pers-sm table-bordered" style="border-bottom: 0px solid white !important;font-size:18px !important;"
+                                    <table class="table_pers table_pers-sm table-bordered" style="border-bottom: 0px solid white !important;"
                                     >
                                         <t t-set="has_serial_number" t-value="forecasted_content['lot_id']" />
                                         <tbody>
@@ -573,8 +290,8 @@
                                                 </tr>
                                             </t>
                                             <tr name="tr_one_product">
-                                                <td width="16%" name="th_one_product" style="color:#000000 !important;">Product</td>
-                                                <th width="84%" style="color:#000000 !important;">
+                                                <td width="13%" name="th_one_product" style="color:#000000 !important;">Product</td>
+                                                <th width="87%" style="color:#000000 !important;">
                                                     <t t-if="forecasted_content['product_id']">
                                                        <span t-esc="forecasted_content['product_id'].name"/>
                                                     </t>
