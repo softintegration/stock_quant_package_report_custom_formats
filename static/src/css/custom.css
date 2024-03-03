@@ -1,7 +1,21 @@
+.table_pers_barcode {
+  width: 100%;
+  color: #212529;
+}
+
+.table_pers_barcode th,
+.table_pers_barcode td {
+  padding: 0rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+
 .table_pers {
   width: 100%;
   color: #212529;
 }
+
 
 .table_pers th,
 .table_pers td {
