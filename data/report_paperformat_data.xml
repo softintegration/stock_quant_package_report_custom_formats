@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data noupdate="1">
+    <data>
         <record id="paperformat_A5_label" model="report.paperformat">
             <field name="name">A5 Label</field>
             <field name="default" eval="True" />
@@ -23,7 +23,7 @@
             <field name="format">A6</field>
             <field name="page_height">0</field>
             <field name="page_width">0</field>
-            <field name="orientation">Landscape</field>
+            <field name="orientation">Portrait</field>
             <field name="margin_top">20</field>
             <field name="margin_bottom">0</field>
             <field name="margin_left">0</field>
