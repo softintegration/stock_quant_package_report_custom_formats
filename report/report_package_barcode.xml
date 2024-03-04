@@ -81,7 +81,7 @@
                                                 <td name="th_one_quantity" style="color:#000000 !important;vertical-align: middle !important;">Quantity</td>
                                                 <th style="color:#000000 !important;font-size:29px !important;">
                                                     <t t-if="o.quant_ids">
-                                                        <span t-field="o.quant_ids[0].quantity"/> <span t-field="o.quant_ids[0].product_id.uom_id.name"/>
+                                                        <span t-field="o.quant_ids[0].quantity" t-options='{"widget": "float", "decimal_precision": "Package contained quantity"}'/> <span t-field="o.quant_ids[0].product_id.uom_id.name"/>
                                                     </t>
                                                 </th>
                                             </tr>
@@ -215,7 +215,7 @@
                                                 <td name="th_one_quantity" style="color:#000000 !important;vertical-align: middle !important;">Quantity</td>
                                                 <th style="color:#000000 !important;font-size:29px !important;">
                                                     <t t-if="o.quant_ids">
-                                                        <span t-field="o.quant_ids[0].quantity"/> <span t-field="o.quant_ids[0].product_id.uom_id.name"/>
+                                                        <span t-field="o.quant_ids[0].quantity" t-options='{"widget": "float", "decimal_precision": "Package contained quantity"}'/> <span t-field="o.quant_ids[0].product_id.uom_id.name"/>
                                                     </t>
                                                 </th>
                                             </tr>
@@ -344,7 +344,7 @@
                                             <tr name="tr_one_quantity">
                                                 <td name="th_one_quantity" style="color:#000000 !important;vertical-align: middle !important;">Quantity</td>
                                                 <th style="color:#000000 !important;font-size:29px !important;">
-                                                    <span t-esc="forecasted_content['quantity']"/> <span t-esc="forecasted_content['product_id'].uom_id.name"/>
+                                                    <span t-esc="forecasted_content['quantity']" t-options='{"widget": "float", "decimal_precision": "Package contained quantity"}'/> <span t-esc="forecasted_content['product_id'].uom_id.name"/>
                                                 </th>
                                             </tr>
                                         </tbody>
