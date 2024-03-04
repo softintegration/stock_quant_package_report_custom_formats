@@ -10,7 +10,7 @@
     'qweb': [],
     'description': False,
     'images': [],
-    'version': '1.0.1.14',
+    'version': '1.0.1.15',
     'category': 'Inventory/Inventory',
     'demo': [],
     'depends': ['stock','web'],
