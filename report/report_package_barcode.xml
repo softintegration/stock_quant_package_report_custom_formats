@@ -46,14 +46,14 @@
                                             <t t-if="partner_in_product">
                                                 <tr name="tr_one_customer">
                                                     <td name="th_one_customer" style="color:#000000 !important;vertical-align: middle !important;">Customer</td>
-                                                    <th style="color:#000000 !important;font-size:29px !important;">
+                                                    <th style="color:#000000 !important;font-size:31px !important;">
                                                         <t t-if="o.quant_ids"><span t-field="o.quant_ids[0].product_id.partner_id"/></t>
                                                     </th>
                                                 </tr>
                                             </t>
                                             <tr name="tr_one_product">
                                                 <td width="15%" name="th_one_product" style="color:#000000 !important;vertical-align: middle !important;">Product</td>
-                                                <th width="85%" style="color:#000000 !important;font-size:29px !important;">
+                                                <th width="85%" style="color:#000000 !important;font-size:31px !important;">
                                                     <t t-if="o.quant_ids">
                                                        <span t-field="o.quant_ids[0].product_id.name"/>
                                                     </t>
@@ -62,16 +62,16 @@
                                             <t t-if="prepress_proof_in_mrp">
                                                 <tr name="tr_one_prepress_proof">
                                                     <td name="th_one_prepress_proof" style="color:#000000 !important;vertical-align: middle !important;">Prepress Proof</td>
-                                                    <th style="color:#000000 !important;font-size:29px !important;"><t t-if="mrp_production and mrp_production.prepress_proof_id"><span t-esc="mrp_production.prepress_proof_id.name"/></t></th>
+                                                    <th style="color:#000000 !important;font-size:31px !important;"><t t-if="mrp_production and mrp_production.prepress_proof_id"><span t-esc="mrp_production.prepress_proof_id.name"/></t></th>
                                                 </tr>
                                                 <tr name="tr_one_prepress_proof_client_ref">
                                                     <td name="th_one_prepress_proof_client_ref" style="color:#000000 !important;vertical-align: middle !important;">Customer Prepress proof reference</td>
-                                                    <th style="color:#000000 !important;font-size:29px !important;"><t t-if="mrp_production and mrp_production.prepress_proof_id"><span t-esc="mrp_production.prepress_proof_id.client_ref"/></t></th>
+                                                    <th style="color:#000000 !important;font-size:31px !important;"><t t-if="mrp_production and mrp_production.prepress_proof_id"><span t-esc="mrp_production.prepress_proof_id.client_ref"/></t></th>
                                                 </tr>
                                             </t>
                                             <tr name="tr_one_serial" t-if="has_serial_number">
                                                 <td name="th_one_serial" style="color:#000000 !important;vertical-align: middle !important;">Lot/Serial Number</td>
-                                                <th style="color:#000000 !important;font-size:29px !important;">
+                                                <th style="color:#000000 !important;font-size:31px !important;">
                                                     <t t-if="o.quant_ids">
                                                         <span t-field="o.quant_ids[0].lot_id.name"/>
                                                     </t>
@@ -79,7 +79,7 @@
                                             </tr>
                                             <tr name="tr_one_quantity">
                                                 <td name="th_one_quantity" style="color:#000000 !important;vertical-align: middle !important;">Quantity</td>
-                                                <th style="color:#000000 !important;font-size:29px !important;">
+                                                <th style="color:#000000 !important;font-size:31px !important;">
                                                     <t t-if="o.quant_ids">
                                                         <span t-field="o.quant_ids[0].quantity" t-options='{"widget": "float", "decimal_precision": "Package contained quantity"}'/> <span t-field="o.quant_ids[0].product_id.uom_id.name"/>
                                                     </t>
@@ -180,14 +180,14 @@
                                             <t t-if="partner_in_product">
                                                 <tr name="tr_one_customer">
                                                     <td name="th_one_customer" style="color:#000000 !important;vertical-align: middle !important;">Customer</td>
-                                                    <th style="color:#000000 !important;font-size:29px !important;">
+                                                    <th style="color:#000000 !important;font-size:31px !important;">
                                                         <t t-if="o.quant_ids"><span t-field="o.quant_ids[0].product_id.partner_id"/></t>
                                                     </th>
                                                 </tr>
                                             </t>
                                             <tr name="tr_one_product">
                                                 <td width="15%" name="th_one_product" style="color:#000000 !important;vertical-align: middle !important;">Product</td>
-                                                <th width="85%" style="color:#000000 !important;font-size:29px !important;">
+                                                <th width="85%" style="color:#000000 !important;font-size:31px !important;">
                                                     <t t-if="o.quant_ids">
                                                        <span t-field="o.quant_ids[0].product_id.name"/>
                                                     </t>
@@ -196,16 +196,16 @@
                                             <t t-if="prepress_proof_in_mrp">
                                                 <tr name="tr_one_prepress_proof">
                                                     <td name="th_one_prepress_proof" style="color:#000000 !important;vertical-align: middle !important;">Prepress Proof</td>
-                                                    <th style="color:#000000 !important;font-size:29px !important;"><t t-if="mrp_production and mrp_production.prepress_proof_id"><span t-esc="mrp_production.prepress_proof_id.name"/></t></th>
+                                                    <th style="color:#000000 !important;font-size:31px !important;"><t t-if="mrp_production and mrp_production.prepress_proof_id"><span t-esc="mrp_production.prepress_proof_id.name"/></t></th>
                                                 </tr>
                                                 <tr name="tr_one_prepress_proof_client_ref">
                                                     <td name="th_one_prepress_proof_client_ref" style="color:#000000 !important;vertical-align: middle !important;">Customer Prepress proof reference</td>
-                                                    <th style="color:#000000 !important;font-size:29px !important;"><t t-if="mrp_production and mrp_production.prepress_proof_id"><span t-esc="mrp_production.prepress_proof_id.client_ref"/></t></th>
+                                                    <th style="color:#000000 !important;font-size:31px !important;"><t t-if="mrp_production and mrp_production.prepress_proof_id"><span t-esc="mrp_production.prepress_proof_id.client_ref"/></t></th>
                                                 </tr>
                                             </t>
                                             <tr name="tr_one_serial" t-if="has_serial_number">
                                                 <td name="th_one_serial" style="color:#000000 !important;vertical-align: middle !important;">Lot/Serial Number</td>
-                                                <th style="color:#000000 !important;font-size:29px !important;">
+                                                <th style="color:#000000 !important;font-size:31px !important;">
                                                     <t t-if="o.quant_ids">
                                                         <span t-field="o.quant_ids[0].lot_id.name"/>
                                                     </t>
@@ -213,7 +213,7 @@
                                             </tr>
                                             <tr name="tr_one_quantity">
                                                 <td name="th_one_quantity" style="color:#000000 !important;vertical-align: middle !important;">Quantity</td>
-                                                <th style="color:#000000 !important;font-size:29px !important;">
+                                                <th style="color:#000000 !important;font-size:31px !important;">
                                                     <t t-if="o.quant_ids">
                                                         <span t-field="o.quant_ids[0].quantity" t-options='{"widget": "float", "decimal_precision": "Package contained quantity"}'/> <span t-field="o.quant_ids[0].product_id.uom_id.name"/>
                                                     </t>
@@ -309,15 +309,17 @@
                                         <tbody>
                                             <t t-if="partner_in_product">
                                                 <tr name="tr_one_customer">
-                                                    <td name="th_one_customer" style="color:#000000 !important;vertical-align: middle !important;">Customer</td>
-                                                    <th style="color:#000000 !important;font-size:29px !important;">
+                                                    <td name="th_one_customer"
+                                                        style="color:#000000 !important;vertical-align: middle !important;font-size:24px !important;">Customer</td>
+                                                    <th style="color:#000000 !important;font-size:31px !important;">
                                                         <t t-if="forecasted_content['partner_id']"><span t-esc="forecasted_content['partner_id'].name"/></t>
                                                     </th>
                                                 </tr>
                                             </t>
                                             <tr name="tr_one_product">
-                                                <td width="18%" name="th_one_product" style="color:#000000 !important;vertical-align: middle !important;">Product</td>
-                                                <th width="82%" style="color:#000000 !important;font-size:29px !important;">
+                                                <td width="18%" name="th_one_product"
+                                                    style="color:#000000 !important;vertical-align: middle !important;font-size:24px !important;">Product</td>
+                                                <th width="82%" style="color:#000000 !important;font-size:31px !important;">
                                                     <t t-if="forecasted_content['product_id']">
                                                        <span t-esc="forecasted_content['product_id'].name"/>
                                                     </t>
@@ -325,33 +327,38 @@
                                             </tr>
                                             <t t-if="prepress_proof_in_mrp">
                                                 <tr name="tr_one_prepress_proof">
-                                                    <td name="th_one_prepress_proof" style="color:#000000 !important;vertical-align: middle !important;">Prepress Proof</td>
-                                                    <th style="color:#000000 !important;font-size:29px !important;"><t t-if="forecasted_content['prepress_proof_id']"><span t-esc="forecasted_content['prepress_proof_id'].name"/></t></th>
+                                                    <td name="th_one_prepress_proof"
+                                                        style="color:#000000 !important;vertical-align: middle !important;font-size:24px !important;">Prepress Proof</td>
+                                                    <th style="color:#000000 !important;font-size:31px !important;"><t t-if="forecasted_content['prepress_proof_id']"><span t-esc="forecasted_content['prepress_proof_id'].name"/></t></th>
                                                 </tr>
                                                 <tr name="tr_one_prepress_proof_client_ref">
-                                                    <td name="th_one_prepress_proof_client_ref" style="color:#000000 !important;vertical-align: middle !important;">Customer Prepress proof reference</td>
-                                                    <th style="color:#000000 !important;font-size:29px !important;"><t t-if="forecasted_content['prepress_proof_id']"><span t-esc="forecasted_content['prepress_proof_id'].client_ref"/></t></th>
+                                                    <td name="th_one_prepress_proof_client_ref"
+                                                        style="color:#000000 !important;vertical-align: middle !important;font-size:24px !important;">Customer Prepress proof reference</td>
+                                                    <th style="color:#000000 !important;font-size:31px !important;"><t t-if="forecasted_content['prepress_proof_id']"><span t-esc="forecasted_content['prepress_proof_id'].client_ref"/></t></th>
                                                 </tr>
                                             </t>
                                             <tr name="tr_one_sale_order" >
-                                                <td name="th_one_sale_order" style="color:#000000 !important;vertical-align: middle !important;">N° Order</td>
-                                                <th style="color:#000000 !important;font-size:29px !important;">
+                                                <td name="th_one_sale_order"
+                                                    style="color:#000000 !important;vertical-align: middle !important;font-size:24px !important;">N° Order</td>
+                                                <th style="color:#000000 !important;font-size:31px !important;">
                                                     <t t-if="forecasted_content['sale_order']">
-                                                        <span t-esc="forecasted_content['sale_order'].name"/>
+                                                        <span t-esc="forecasted_content['sale_order'].client_order_ref"/>
                                                     </t>
                                                 </th>
                                             </tr>
                                             <tr name="tr_one_serial" t-if="has_serial_number">
-                                                <td name="th_one_serial" style="color:#000000 !important;vertical-align: middle !important;">Lot/Serial Number</td>
-                                                <th style="color:#000000 !important;font-size:29px !important;">
+                                                <td name="th_one_serial"
+                                                    style="color:#000000 !important;vertical-align: middle !important;font-size:24px !important;">Lot/Serial Number</td>
+                                                <th style="color:#000000 !important;font-size:31px !important;">
                                                     <t t-if="forecasted_content['lot_id']">
                                                         <span t-esc="forecasted_content['lot_id'].name"/>
                                                     </t>
                                                 </th>
                                             </tr>
                                             <tr name="tr_one_quantity">
-                                                <td name="th_one_quantity" style="color:#000000 !important;vertical-align: middle !important;">Quantity</td>
-                                                <th style="color:#000000 !important;font-size:29px !important;">
+                                                <td name="th_one_quantity"
+                                                    style="color:#000000 !important;vertical-align: middle !important;font-size:24px !important;">Quantity</td>
+                                                <th style="color:#000000 !important;font-size:31px !important;">
                                                     <span t-esc="forecasted_content['quantity']" t-options='{"widget": "float", "decimal_precision": "Package contained quantity"}'/> <span t-esc="forecasted_content['product_id'].uom_id.name"/>
                                                 </th>
                                             </tr>

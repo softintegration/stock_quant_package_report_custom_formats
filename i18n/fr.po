@@ -39,7 +39,7 @@ msgstr "N° de lot"
 #. module: stock_quant_package_report_custom_formats
 #: model_terms:ir.ui.view,arch_db:stock_quant_package_report_custom_formats.report_package_barcode_small_forecasted_content
 msgid "N° Order"
-msgstr "N° Commande"
+msgstr "N° BC"
 
 #. module: stock_quant_package_report_custom_formats
 #: model:ir.actions.report,name:stock_quant_package_report_custom_formats.action_report_quant_package_barcode
