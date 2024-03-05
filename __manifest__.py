@@ -19,7 +19,6 @@
         'data/stock_quant_package_report_custom_formats_data.xml',
         'report/report_package_barcode.xml',
         'report/stock_report_views.xml',
-        'views/stock_quant_views.xml'
     ],
     'license': 'LGPL-3',
 }
